@@ -1,0 +1,7 @@
+import { Card } from '../components/ui/Card';
+
+const quickLinks = ['Kế hoạch bài dạy', 'Tư liệu & Biểu mẫu', 'Thời khóa biểu', 'Ngân hàng câu hỏi'];
+
+export function DashboardPage() {
+return <div className="space-y-6"><section className="rounded-3xl bg-[var(--primary)] p-6 text-[var(--primary-foreground)]"><p className="text-sm font-semibold opacity-80">TPH Core</p><h1 className="mt-2 text-3xl font-bold">Trung tâm quản lý chuyên môn cá nhân</h1><p className="mt-3 max-w-2xl opacity-90">Không gian khởi đầu để giáo viên quản lý hồ sơ, kế hoạch, tài liệu và lịch công tác trong các giai đoạn tiếp theo.</p></section><div className="grid gap-4 lg:grid-cols-3"><Card><h2 className="font-bold">Lịch hôm nay</h2><p className="mt-3 text-sm text-[var(--muted-foreground)]">Chưa có dữ liệu thời khóa biểu. Module sẽ được kết nối ở giai đoạn sau.</p></Card><Card><h2 className="font-bold">Việc sắp tới</h2><p className="mt-3 text-sm text-[var(--muted-foreground)]">Danh sách công việc và hạn nộp sẽ hiển thị tại đây.</p></Card><Card><h2 className="font-bold">Tài liệu gần đây</h2><p className="mt-3 text-sm text-[var(--muted-foreground)]">Khu vực xem nhanh hồ sơ và tài liệu vừa cập nhật.</p></Card></div><section><h2 className="mb-3 text-xl font-bold">Truy cập nhanh</h2><div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">{quickLinks.map((label) => <Card key={label} className="min-h-28"><p className="font-semibold">{label}</p><p className="mt-2 text-sm text-[var(--muted-foreground)]">Lối tắt placeholder cho module.</p></Card>)}</div></section></div>;
+}
